@@ -8,13 +8,16 @@ param tags object
 param aiServicesName string
 
 @description('The chat model name to deploy')
-param chatModelName string = 'gpt-4o-mini'
+param chatModelName string = 'gpt-5-mini'
 
 @description('The chat model format')
 param chatModelFormat string = 'OpenAI'
 
+@description('The chat model version')
+param chatModelVersion string = '2025-08-07'
+
 @description('The chat model SKU name')
-param chatModelSkuName string = 'Standard'
+param chatModelSkuName string = 'GlobalStandard'
 
 @description('The chat model capacity')
 param chatModelCapacity int = 100
@@ -49,6 +52,7 @@ resource chatModelDeployment 'Microsoft.CognitiveServices/accounts/deployments@2
     model: {
       format: chatModelFormat
       name: chatModelName
+      version: chatModelVersion
     }
   }
 }

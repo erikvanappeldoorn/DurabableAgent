@@ -10,7 +10,7 @@ using OpenAI.Chat;
 
 var endpoint = Environment.GetEnvironmentVariable("AZURE_OPENAI_ENDPOINT") 
     ?? throw new InvalidOperationException("AZURE_OPENAI_ENDPOINT environment variable is not set");
-var deploymentName = Environment.GetEnvironmentVariable("AZURE_OPENAI_DEPLOYMENT") ?? "gpt-4o-mini";
+var deploymentName = Environment.GetEnvironmentVariable("AZURE_OPENAI_DEPLOYMENT") ?? "gpt-5-mini";
 
 // Create the Azure OpenAI client
 AzureOpenAIClient client = new(new Uri(endpoint), new DefaultAzureCredential());

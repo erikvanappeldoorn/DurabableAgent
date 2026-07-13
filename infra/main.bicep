@@ -30,8 +30,8 @@ param storageAccountName string = ''
 param dtsSkuName string = 'Consumption'
 param dtsName string = ''
 
-@allowed(['gpt-4o-mini'])
-param chatModelName string = 'gpt-4o-mini'
+@allowed(['gpt-5-mini'])
+param chatModelName string = 'gpt-5-mini'
 
 import * as regionSelector from './app/util/region-selector.bicep'
 var abbrs = loadJsonContent('./abbreviations.json')

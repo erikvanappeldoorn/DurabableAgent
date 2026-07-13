@@ -42,15 +42,11 @@ var modelRegionMap = {
     }
     default: 'westus'
   }
-  'gpt-4o-mini': {
-    // Currently supported regions: 
-    //    Australia East, Brazil South, Canada East, East US, East US 2, France Central, Germany West Central, Italy North, 
-    //    Japan East, Korea Central, North Central US, Norway East, Poland Central, South Africa North, South Central US,
-    //    South India, Spain Central, Sweden Central, Switzerland North, UAE North, UK South, West Europe, West US, West US 3
+  'gpt-5-mini': {
+    // Currently supported regions (GlobalStandard SKU), confirmed via `az cognitiveservices model list`:
+    //    Australia East, East US, East US 2, France Central, Japan East, Sweden Central, UK South, West US, West US 3
     supportedRegions: [
-      'australiaeast', 'brazilsouth', 'canadaeast', 'eastus', 'eastus2', 'francecentral', 'germanywestcentral', 'italynorth'
-      'japaneast', 'koreacentral', 'northcentralus', 'norwayeast', 'polandcentral', 'southafricanorth', 'southcentralus'
-      'southindia', 'spaincentral', 'swedencentral', 'switzerlandnorth', 'uaenorth', 'uksouth', 'westeurope', 'westus', 'westus3'
+      'australiaeast', 'eastus', 'eastus2', 'francecentral', 'japaneast', 'swedencentral', 'uksouth', 'westus', 'westus3'
     ]
     overrides: {
       westus2: 'westus'
